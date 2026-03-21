@@ -1,0 +1,92 @@
+name: bg_remover
+description: Free Photo Background Cleaner AI - Remove image backgrounds on-device using AI
+publish_to: 'none'
+version: 1.0.0+6
+
+environment:
+  sdk: ^3.6.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # ONNX Runtime for on-device ML inference
+  flutter_onnxruntime: ^1.6.0
+
+  # Image manipulation (decode, encode, pixel ops)
+  image: ^4.3.0
+
+  # Pick images from gallery or camera
+  image_picker: ^1.1.2
+
+  # Access app documents directory for model caching
+  path_provider: ^2.1.4
+
+  # Native share sheet for exporting results
+  share_plus: ^10.1.4
+
+  # Runtime permission requests
+  permission_handler: ^11.3.1
+
+  # HTTP client for downloading model
+  http: ^1.2.2
+
+  # Modern typography
+  google_fonts: ^6.2.1
+
+  # AdMob for monetization
+  google_mobile_ads: ^5.3.1
+
+  # Save images to device gallery
+  gal: ^2.3.0
+
+  # Persistent key-value storage (onboarding, counters)
+  shared_preferences: ^2.3.3
+
+  # In-app review prompt
+  in_app_review: ^2.0.9
+
+  # Splash screen control (preserve/remove)
+  flutter_native_splash: ^2.4.7
+
+  # Type-safe declarative routing
+  go_router: ^14.8.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+  flutter_launcher_icons: ^0.14.4
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/
+    - assets/models/ormbg_model.onnx
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "logo.png"
+  adaptive_icon_background: "#121212"
+  adaptive_icon_foreground: "logo.png"
+  web:
+    generate: true
+    image_path: "logo.png"
+  windows:
+    generate: true
+    image_path: "logo.png"
+  macos:
+    generate: true
+    image_path: "logo.png"
+
+flutter_native_splash:
+  color: "#121212"
+  android: true
+  ios: true
+  web: true
+  image: "logo.png"
+  android_12:
+    color: "#121212"
+    image: "logo.png"
